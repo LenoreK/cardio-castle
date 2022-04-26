@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from './Login'
-import Four_Week_Goal from './Four_Week-Goal'
+import Four_Week_Goal from './Four_Week_Goal'
 
 const Nav = () => {
     return (
