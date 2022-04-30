@@ -2,6 +2,7 @@ import './App.css';
 import React from "react"
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 import LoginForm from "./Components/LoginForm";
+import Profile from "./Components/Profile";
 import TopBar from './Components/TopBar';
 import { useState } from 'react';
 
@@ -32,6 +33,7 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<LoginForm />} />
+            <Route path="/Profile" element={<Profile />} />
           </Routes>
         </div>
       </Router>
