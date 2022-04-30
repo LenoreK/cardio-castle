@@ -1,7 +1,25 @@
+
+.App {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: cover;
+}
+
 .link {
   color: white;
 }
 
 ul {
   list-style: none;
+}
+
+.main {
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  background-size: cover;
+  background-position: cover;
+  background-image:url('../public/biker.jpg');
 }

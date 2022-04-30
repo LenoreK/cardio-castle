@@ -17,7 +17,7 @@ function Login() {
                 <div className="button">
                     <ul>
                         <li>
-                            <Button variant='primary'>
+                            <Button type='submit' variant='primary'>
                             <Link className='link' to="/profile">
                                 Login
                             </Link>
