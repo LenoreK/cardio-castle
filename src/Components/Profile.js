@@ -3,20 +3,16 @@ import React from 'react';
 function Profile() {
     return (
         <body>
-            <div class='main-container'>
-                <header>
-                    <h1>Cardio Castle</h1>
-                </header>
+            <div className='main-container'>
+                <h1 className='title'>Cardio Castle</h1>
                 <aside>
-                    <nav>
-                        Aside / Nav
-                    </nav>
+                    Aside / Nav
                 </aside>
-            <main>
-                <div class='main-image'>Main Image</div>
-                <div class='two-row'>Row 2</div>
-                <div class='three-row'>Row 3</div>
-            </main>
+                <main>
+                    <div className='one-row'>Row 1</div>
+                    <div className='two-row'>Row 2</div>
+                    <div className='three-row'>Row 3</div>
+                </main>
         <footer>
             Footer
         </footer>

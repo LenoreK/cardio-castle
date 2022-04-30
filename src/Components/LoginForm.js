@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
-import { Button, Form, FormGroup, Label, Input } from 'react-bootstrap';
-import FormRange from 'react-bootstrap/esm/FormRange';
+import { Button, Form,} from 'react-bootstrap';
 
 function LoginForm() {
     return (

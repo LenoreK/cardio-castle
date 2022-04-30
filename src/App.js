@@ -18,7 +18,7 @@ function App() {
   const [error, setError] = useState("");
 
   return (
-    <div className='main'>
+    <div className='body'>
       <Router>
         <header>
           <div className="topBar">
