@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
-import { Button, Form,} from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 
 function LoginForm() {
     return (
