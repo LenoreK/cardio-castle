@@ -115,42 +115,49 @@ main {
   border-radius: 30px;
   margin: 10px;
   min-height: 20vh;
+  text-align: center;
 }
 
 .b {
   background-color:aquamarine;
   border-radius: 30px;
   margin: 10px;
+  text-align: center;
 }
 
 .c {
   background-color: purple;
   border-radius: 30px;
   margin: 10px;
+  text-align: center;
 }
 
 .d {
   background-color: greenyellow;
   border-radius: 30px;
   margin: 10px;
+  text-align: center;
 }
 
 .e {
   background-color: yellow;
   border-radius: 30px;
   margin: 10px;
+  text-align: center;
 }
 
 .f {
   background-color: orange;
   border-radius: 30px;
   margin: 10px;
+  text-align: center;
 }
 
 .g {
   background-color: red;
   border-radius: 30px;
   margin: 10px;
+  text-align: center;
 }
 
 .three-row {
