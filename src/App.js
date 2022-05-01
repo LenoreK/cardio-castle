@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react"
-import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginForm from "./Components/LoginForm";
 import Profile from "./Components/Profile";
 import TopBar from './Components/TopBar';
@@ -20,16 +20,6 @@ function App() {
   return (
     <div className='body'>
       <Router>
-        <header>
-          <div className="topBar">
-            <ul>
-              <li>
-                <Link to="/Profile"></Link>
-              </li>
-            </ul>
-          </div>
-        </header>
-
         <div>
           <Routes>
             <Route path="/" element={<LoginForm />} />

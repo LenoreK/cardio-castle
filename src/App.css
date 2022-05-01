@@ -47,10 +47,22 @@ body {
 .title {
   min-height: 8vh;
   flex-grow: 1;
-  background-color: blue;
+  display: flex;
   border-radius:30px;
   padding: 10px;
   margin: 10px;
+}
+
+.cardioCastle {
+  flex-grow: 5;
+  color: whitesmoke;
+  font-family: 'Sideways BRK', sans-serif;
+  font-size: 20%;                        
+}
+
+.logout {
+  flex-grow: 1;
+  padding-right: 20px;
 }
 
 aside {
@@ -58,8 +70,8 @@ aside {
   flex-grow: 1;
   padding: 10px;
   margin: 10px;
-  background-color: whitesmoke;
-  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -77,8 +89,8 @@ footer {
   min-height: 15vh;
   flex-grow: 1;
   padding: 10px;
-  background-color: blueviolet;
-  margin: 10px;
+  background-color: white;
+  margin-top: 10px;
 }
 
 @media (min-width: 600px) {
@@ -109,4 +121,17 @@ footer {
 .welcome {
   height: 20%;
   padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 30px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.monthly-goal {
+  text-align: center;
+  background-color: white;
+  margin: 10px;
+  border-radius: 30px;
+  flex-grow: 5;
 }

@@ -13,7 +13,7 @@ function Profile() {
                 <h2>Write a Goal</h2> 
                     <div className="form-inner">
                         <Form.Group className="mb-3" controlId="formBasicUser">
-                            <Form.Control type='text' placeholder="Write a Goal..." />
+                            <Form.Control type='textarea' placeholder="Write a Goal..." />
                         </Form.Group>
                             <Button type='submit' variant='primary'>Start Goal</Button>
                             <br />

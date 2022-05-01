@@ -1,12 +1,12 @@
 import React from 'react';
-
 import Aside from './Aside.js'
+import TopBar from './TopBar.js'
 
 function Profile() {
     return (
         <body>
             <div className='main-container'>
-                <h1 className='title'>Cardio Castle</h1>
+                <TopBar />
                 <Aside />
                 <main>
                     <div className='one-row'>Row 1</div>
@@ -14,7 +14,7 @@ function Profile() {
                     <div className='three-row'>Row 3</div>
                 </main>
         <footer>
-            Footer
+            <small>&copy; Copyright 2022 Cardio Castle</small>
         </footer>
     </div>
 </body>
