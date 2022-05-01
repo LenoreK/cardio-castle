@@ -4,10 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 function Profile() {
     return (
     <aside>
-        <div className='welcome'>
-            <h2>Welcome</h2>
-            <h2>Name</h2>
-        </div>
+        <h2 className='welcome'>Welcome Name</h2>
         <div className="monthly-goal">
             <Form className='goal-form'>
                 <h2 className="write-goal">Write a Goal</h2> 
