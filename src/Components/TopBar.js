@@ -5,12 +5,8 @@ import { Button, Row } from 'react-bootstrap';
 function TopBar() {
     return (
         <div className='title'>
-            <Row className="cardioCastle">
-            <h1>Cardio Castle</h1>
-            </Row>
-            <Row className="logout">
-                <Button><Link className='link' to="/">Logout</Link></Button>
-            </Row>
+            <h1 className="cardioCastle">Cardio Castle</h1>
+            <Button className="logout"><Link className='link' to="/">Logout</Link></Button>
         </div>
     )
 }

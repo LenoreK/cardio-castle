@@ -9,7 +9,12 @@ function Profile() {
                 <TopBar />
                 <Aside />
                 <main>
-                    <div className='one-row'>Row 1</div>
+                    <div className='one-row'>
+                        <div>Week 1</div>
+                        <div>Week 2</div>
+                        <div>Week 3</div>
+                        <div>Week 4</div>
+                    </div>
                     <div className='two-row'>Row 2</div>
                     <div className='three-row'>Row 3</div>
                 </main>

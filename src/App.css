@@ -49,29 +49,33 @@ body {
   flex-grow: 1;
   display: flex;
   border-radius:30px;
-  padding: 10px;
+  background-color:blue;
   margin: 10px;
 }
 
 .cardioCastle {
   flex-grow: 5;
-  color: whitesmoke;
-  font-family: 'Sideways BRK', sans-serif;
-  font-size: 20%;                        
+  color: whitesmoke;  
+  padding: 12px;
+  margin: 10px;
+  font-size: 50px;
+  background-color:green;
+  border-radius: 30px;
 }
 
 .logout {
   flex-grow: 1;
   padding-right: 20px;
+  margin: 20px;
+  background-color:orange;
 }
 
 aside {
   min-height: 15vh;
   flex-grow: 1;
-  padding: 10px;
-  margin: 10px;
   display: flex;
   flex-direction: column;
+  padding-left: 10px;
 }
 
 main {
@@ -80,7 +84,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: purple;
+  background-color: whitesmoke;
   border-radius: 30px;
   margin: 10px;
 }
@@ -89,7 +93,7 @@ footer {
   min-height: 15vh;
   flex-grow: 1;
   padding: 10px;
-  background-color: white;
+  background-color: whitesmoke;
   margin-top: 10px;
 }
 
