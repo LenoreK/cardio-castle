@@ -10,7 +10,7 @@ function Profile() {
         </div>
         <div className="monthly-goal">
             <Form className='goal-form'>
-                <h2>Write a Goal</h2> 
+                <h2 className="write-goal">Write a Goal</h2> 
                     <div className="form-inner">
                         <Form.Group className="mb-3" controlId="formBasicUser">
                             <Form.Control type='textarea' placeholder="Write a Goal..." />
