@@ -12,7 +12,8 @@ function Profile() {
                 <main>
                     <WeeklyRecord />
                     <div className="three-row">
-                        Hello
+                        {/* Need to add days that switch */}
+                        <h1>Day 2</h1>
                     </div>
                 </main>
         <footer>

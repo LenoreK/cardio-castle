@@ -9,12 +9,12 @@ function Profile() {
             <Form className='goal-form'>
                 <h2 className="write-goal">Write a Goal</h2> 
                     <div className="form-inner">
-                        <Form.Group className="mb-3" controlId="formBasicUser">
-                            <Form.Control type='textarea' placeholder="Write a Goal..." />
+                        <Form.Group className="textArea" controlId="formBasicUser">
+                            <Form.Control as='textarea' rows={6} placeholder="Write a Goal..." />
                         </Form.Group>
-                            <Button type='submit' variant='primary'>Start Goal</Button>
+                            <Button className="startGoal" type='submit' variant='primary'>Start Goal</Button>
                             <br />
-                            <Button type="submit">Finish Goal</Button>
+                            <Button className="finishGoal" type="submit">Finish Goal</Button>
                             </div>
                         </Form> 
                     </div>

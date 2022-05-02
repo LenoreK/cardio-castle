@@ -1,11 +1,9 @@
+/* Makes the link text white */
 .link {
   color: white;
 }
 
-ul {
-  list-style: none;
-}
-
+/* Contains the specifications for the background picture */
 body {
   min-width: 100%;
   /* min-height: 100%; */
@@ -15,6 +13,7 @@ body {
   background-image:url('../public/sneakers.jpg');
 }
 
+/* Contains the specifications for the login form */
 .login-form {
   padding: 2vh;
   position: fixed;
@@ -22,10 +21,9 @@ body {
   border-radius: 3vh;
   left: 30vh;
   top: 33vh;
-  width: 32vh;
-  height: 32vh;
 }
 
+/* Contains the specifications for the layout of the Title, Aside, Main, and Header */
 .main-container {
   display: flex;
   min-height: 100vh;
@@ -35,6 +33,7 @@ body {
   margin-right: auto;
 }
 
+/* This is for formatting and background-color in the Title container */
 .title {
   min-height: 8vh;
   flex-grow: 1;
@@ -44,6 +43,7 @@ body {
   margin: 1vh;
 }
 
+/* This is for formatting the title. The flex-grow gives the title more room. */
 .cardioCastle {
   flex-grow: 5;
   color: whitesmoke;  
@@ -53,6 +53,7 @@ body {
   border-radius: 30px;
 }
 
+/* This is for formatting the logout button. The flex-grow gives the button less room. */
 .logout {
   flex-grow: 1;
   padding-right: 20px;
@@ -60,12 +61,34 @@ body {
   background-color:orange;
 }
 
+/* This is for the bar on the side - this styling only applies when the screen is big. */
 aside {
-  min-height: 15vh;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
+  padding-left: 1vh;
+}
+
+.goal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.write-goal {
+  margin-top: 2vh;
+}
+
+.textArea {
+  margin: 2vh;
+}
+
+.startGoal {
+  margin-bottom: 1vh;
+}
+
+.finishGoal {
+  margin-bottom: 1vh;
 }
 
 main {

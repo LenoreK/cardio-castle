@@ -3,6 +3,7 @@ import { Tabs, Row } from 'react-bootstrap';
 import { Tab, Container } from 'react-bootstrap';
 
 function WeeklyRecord() {
+
     return (
         <div>
             <div className='one-row'>
