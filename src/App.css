@@ -185,9 +185,10 @@ main {
 .three-row {
   flex-grow: 5;
   padding: 10px;
-  display: flex;
   gap: 12px;
   background-color: green;
+  display: flex;
+  display: row;
 }
 
 footer {
