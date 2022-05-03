@@ -6,19 +6,17 @@ import DailyComponent from './DailyComponent'
 
 function Profile() {
     return (
-        <body>
-            <div className='main-container'>
+        <div className='main-container'>
                 <TopBar />
                 <Aside />
                 <main>
                     <WeeklyRecord />
                     <DailyComponent />
                 </main>
-        <footer>
-            <small>&copy; Copyright 2022 Cardio Castle</small>
-        </footer>
-    </div>
-</body>
+            <footer>
+                <small>&copy; Copyright 2022 Cardio Castle</small>
+            </footer>
+        </div>
     )
 }
 
