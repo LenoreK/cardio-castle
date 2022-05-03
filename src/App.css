@@ -214,7 +214,7 @@ button {
 
 .choiceSmiley {
   text-align: center;
-  margin-left: -2em;
+  /* margin-left: -2em; */
   background-color: whitesmoke;
   padding: 2vh;
   border-radius: 30px;
