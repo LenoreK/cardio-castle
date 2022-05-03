@@ -192,7 +192,40 @@ button {
   gap: 12px;
   background-color: green;
   display: flex;
-  
+  flex-direction: column;
+  border-top: solid 5px black;
+}
+
+.dayHeader {
+  text-align: center;
+  font-size: 2em;
+  border-radius: 30px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly; 
+  font-size: 2em;
+  font-family: sans-serif;
+}
+
+.choiceSmiley {
+  text-align: center;
+  margin-left: -7em;
+}
+
+.feel {
+  font-size: 1.5em;
+}
+
+.smiley {
+  max-height: 20vh;
+  margin: 1vh;
+}
+
+.frownie {
+  max-height: 20vh;
+  margin: 1vh;
 }
 
 footer {
