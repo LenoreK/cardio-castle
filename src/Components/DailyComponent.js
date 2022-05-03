@@ -6,11 +6,13 @@ function DailyComponent() {
         <div className="three-row">
             <div className="dayHeader">
                 {/* Need to add in code for changing the number */}
-                <h2>Day 2</h2>
+                <h2 className="dayHeader">Day 2</h2>
             </div>
             <div className="stats">
                 <div className="choiceSmiley">
-                    <h3>How did you feel today?</h3>
+                    <h3 className='feel'>How did you feel today?</h3>
+                    <img className="smiley" src="../smiley.png"></img>
+                    <img className="frownie" src="../frownie.png"></img>
                 </div>
                 <Form className='distanceDuration'>
                     <Form.Group className="mb-3" controlId="formBasicDuration">
