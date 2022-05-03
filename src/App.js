@@ -11,7 +11,7 @@ function App() {
 	let [message, setMessage] = useState('Search for Music!')
 	let [data, setData] = useState([])
 
-  const API_URL = 'http://127.0.0.1:3000/users/'
+  const API_URL = 'https://cardio-castle-foundation.herokuapp.com/users/'
 
   useEffect(() => {
     console.log("useEffect - API")
