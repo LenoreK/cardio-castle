@@ -181,13 +181,18 @@ main {
   text-align: center;
 }
 
+button {
+  border: transparent;
+  background-color:transparent;
+}
+
 .three-row {
   flex-grow: 5;
   padding: 10px;
   gap: 12px;
   background-color: green;
   display: flex;
-  display: row;
+  
 }
 
 footer {
