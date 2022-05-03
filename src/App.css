@@ -58,7 +58,6 @@ body {
   flex-grow: 1;
   padding-right: 20px;
   margin: 20px;
-  background-color:orange;
 }
 
 /* This is for the bar on the side - this styling only applies when the screen is big. */
