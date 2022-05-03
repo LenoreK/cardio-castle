@@ -11,8 +11,8 @@ function DailyComponent() {
             <div className="stats">
                 <div className="choiceSmiley">
                     <h3 className='feel'>How did you feel today?</h3>
-                    <img className="smiley" src="../smiley.png"></img>
-                    <img className="frownie" src="../frownie.png"></img>
+                    <img className="smiley" src="../smiley-2.png"></img>
+                    <img className="frownie" src="../frownie-2.png"></img>
                 </div>
                 <Form className='distanceDuration'>
                     <Form.Group className="mb-3" controlId="formBasicDuration">
