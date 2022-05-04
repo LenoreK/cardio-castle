@@ -11,40 +11,48 @@ function App() {
 	let [message, setMessage] = useState('Search for Music!')
 	let [data, setData] = useState([])
 
-  const API_URL = 'https://cardio-castle-foundation.herokuapp.com/users/'
+  // const API_URL = 'https://cardio-castle-foundation.herokuapp.com/users/'
 
-  useEffect(() => {
-    console.log("useEffect - API")
-		if(enteredUsers) {
-      console.log(`useEffect - ${enteredUsers}`)
-			const fetchData = async () => {
-        let fetchString = API_URL + enteredUsers
-        console.log(fetchString)				
-        let response = await fetch(fetchString,{
-					crossDomain:true,
-					method: 'GET',
-					headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*'}})
-        console.log(response)
-        console.log(`fetch - ${response}`)
-				let resData = await response.body.json();
-        console.log(`resData - ${resData}`)
-				if (resData.results.length > 0) {
-          console.log("HERE WE ARE")
-          console.log(resData.results)
-					setData(resData.results)
-				} else {
-					setMessage('Not Found')
-				}
-			}
-			fetchData()
-		}
-	}, [enteredUsers])
+  // useEffect(() => {
+  //   console.log("useEffect - API")
+	// 	if(enteredUsers) {
+  //     console.log(`useEffect - ${enteredUsers}`)
+	// 		const fetchData = async () => {
+  //       let fetchString = API_URL + enteredUsers
+  //       console.log(fetchString)				
+  //       let response = await fetch(fetchString,{
+  //         mode: "no-cors",
+  //         method: "GET",
+  //         headers: {
+  //           "Accept": "application/json"
+  //       }})
+  //       console.log(response)
+  //       console.log(`fetch - ${response}`)
+	// 			let resData = await response.body.json().then((response) => {
+  //         console.log(response.body);
+  //         return dispatch({
+  //           type: "GET_CALL",
+  //           response: response.body
+  //         });
+  //       })
+  //       console.log(`resData - ${resData}`)
+	// 			if (resData.results.length > 0) {
+  //         console.log("HERE WE ARE")
+  //         console.log(resData.results)
+	// 				setData(resData.results)
+	// 			} else {
+	// 				setMessage('Not Found')
+	// 			}
+	// 		}
+	// 		fetchData()
+	// 	}
+	// }, [enteredUsers])
 
-  const handleEnteredUser = (e, userName) => {
-		e.preventDefault()
-    console.log(userName)
-		setEnteredUsers(userName)
-	}
+  // const handleEnteredUser = (e, userName) => {
+	// 	e.preventDefault()
+  //   console.log(userName)
+	// 	setEnteredUsers(userName)
+	// }
 
   // const adminUser = {
   //   username: "admin",
@@ -60,7 +68,8 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route path="/" element={<LoginForm  handleEnteredUser={handleEnteredUser}/>} />
+            <Route path="/" element={<LoginForm  />} />
+            {/* handleEnteredUser={handleEnteredUser} This belongs above.*/}
             <Route path="/Profile" element={<Profile />} />
           </Routes>
         </div>

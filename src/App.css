@@ -118,6 +118,11 @@ main {
   flex-grow: 5;
 }
 
+.main-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .one-row {
   flex-grow: 1;
 }
@@ -192,7 +197,7 @@ button {
   background-color: lightslategray;
   display: flex;
   flex-direction: column;
-  border: solid .5px black;
+  border-top: solid .5px darkslategrey;
 }
 
 .dayHeader {
@@ -220,17 +225,40 @@ button {
 }
 
 .feel {
-  font-size: 1.5em;
+  font-size: 1.1em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1vh;
 }
 
 .smiley {
-  max-height: 20vh;
+  max-height: 18vh;
   margin: 1vh;
+  margin-top: 1vh;
 }
 
 .frownie {
-  max-height: 20vh;
+  max-height: 18vh;
   margin: 1vh;
+  margin-top: 1vh;
+}
+
+.distanceDuration {
+  padding: 10px;
+  font-size: 1.1em;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left:4vh;
+  padding-right: 4vh;
+}
+
+.notesContainer {
+  padding-right: 8vh;
+  padding-left: 8vh;
+}
+
+.notes {
+  margin-top: 3vh;
+  font-size: 1.1em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
   footer {
@@ -245,6 +273,7 @@ button {
   .title, footer {
       width: 100%;
   }
+}
 
 @media (min-width: 750px) {
   .login-form {
@@ -252,8 +281,14 @@ button {
   }
 }
 
-  .main-container {
-      flex-direction: row;
-      flex-wrap: wrap;
+@media (max-width: 750px) {
+  .smiley {
+    max-height: 15vh;
+  }
+}
+
+@media (max-width: 750px) {
+  .frownie {
+    max-height: 15vh;
   }
 }
