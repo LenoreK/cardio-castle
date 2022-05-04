@@ -18,11 +18,12 @@ function App() {
 		if(enteredUsers) {
       console.log(`useEffect - ${enteredUsers}`)
 			const fetchData = async () => {
-        console.log(`fetchData - ${enteredUsers}`)
-				document.title = `${enteredUsers} Welcome`
-        console.log(`fetch - ${API_URL + enteredUsers}`)
-        let response = await fetch('https://cardio-castle-foundation.herokuapp.com/users/Bevius')
-				//let response = await fetch(API_URL + enteredUsers,{mode:'no-cors'})
+        let fetchString = API_URL + enteredUsers
+        console.log(fetchString)				
+        let response = await fetch(fetchString,{
+					crossDomain:true,
+					method: 'GET',
+					headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*'}})
         console.log(response)
         console.log(`fetch - ${response}`)
 				let resData = await response.body.json();
