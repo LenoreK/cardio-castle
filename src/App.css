@@ -58,7 +58,6 @@ body {
   flex-grow: 1;
   padding-right: 20px;
   margin: 20px;
-  background-color:orange;
 }
 
 /* This is for the bar on the side - this styling only applies when the screen is big. */
@@ -182,13 +181,57 @@ main {
   text-align: center;
 }
 
+button {
+  border: transparent;
+  background-color:transparent;
+}
+
 .three-row {
   flex-grow: 5;
   padding: 10px;
   gap: 12px;
-  background-color: green;
+  background-color: lightslategray;
   display: flex;
-  display: row;
+  flex-direction: column;
+  border: solid .5px black;
+}
+
+.dayHeader {
+  text-align: center;
+  font-size: 2em;
+  border-radius: 30px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly; 
+  font-size: 2em;
+  font-family: sans-serif;
+  background-color: whitesmoke;
+  padding: 2vh;
+  border-radius: 30px;
+}
+
+.choiceSmiley {
+  text-align: center;
+  /* margin-left: -2em; */
+  background-color: whitesmoke;
+  padding: 2vh;
+  border-radius: 30px;
+}
+
+.feel {
+  font-size: 1.5em;
+}
+
+.smiley {
+  max-height: 20vh;
+  margin: 1vh;
+}
+
+.frownie {
+  max-height: 20vh;
+  margin: 1vh;
 }
 
 footer {
