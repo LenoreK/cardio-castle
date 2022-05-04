@@ -4,7 +4,7 @@ import TopBar from './TopBar.js'
 import WeeklyRecord from './WeeklyRecords.js'
 import DailyComponent from './DailyComponent'
 
-function Profile() {
+function Profile(props) {
     return (
         <div className='main-container'>
             <TopBar />

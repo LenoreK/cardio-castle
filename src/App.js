@@ -6,53 +6,53 @@ import Profile from "./Components/Profile";
 import TopBar from './Components/TopBar';
 import {useEffect, useState } from 'react';
 
-function App() {
+function App(props) {
   let [enteredUsers, setEnteredUsers] = useState('')
 	let [message, setMessage] = useState('Search for Music!')
 	let [data, setData] = useState([])
 
-  // const API_URL = 'https://cardio-castle-foundation.herokuapp.com/users/'
+  const API_URL = 'https://cardio-castle-foundation.herokuapp.com/users/'
 
-  // useEffect(() => {
-  //   console.log("useEffect - API")
-	// 	if(enteredUsers) {
-  //     console.log(`useEffect - ${enteredUsers}`)
-	// 		const fetchData = async () => {
-  //       let fetchString = API_URL + enteredUsers
-  //       console.log(fetchString)				
-  //       let response = await fetch(fetchString,{
-  //         mode: "no-cors",
-  //         method: "GET",
-  //         headers: {
-  //           "Accept": "application/json"
-  //       }})
-  //       console.log(response)
-  //       console.log(`fetch - ${response}`)
-	// 			let resData = await response.body.json().then((response) => {
-  //         console.log(response.body);
-  //         return dispatch({
-  //           type: "GET_CALL",
-  //           response: response.body
-  //         });
-  //       })
-  //       console.log(`resData - ${resData}`)
-	// 			if (resData.results.length > 0) {
-  //         console.log("HERE WE ARE")
-  //         console.log(resData.results)
-	// 				setData(resData.results)
-	// 			} else {
-	// 				setMessage('Not Found')
-	// 			}
-	// 		}
-	// 		fetchData()
-	// 	}
-	// }, [enteredUsers])
+  useEffect(() => {
+    console.log("useEffect - API")
+		if(enteredUsers) {
+      console.log(`useEffect - ${enteredUsers}`)
+			const fetchData = async () => {
+        let fetchString = API_URL + enteredUsers
+        console.log(fetchString)				
+        let response = await fetch(fetchString,{
+          mode: "no-cors",
+          method: "GET",
+          headers: {
+            "Accept": "application/json"
+        }})
+        console.log(response)
+        console.log(`fetch - ${response}`)
+				let resData = await response.body.json().then((response) => {
+          console.log(response.body);
+          return dispatch({
+            type: "GET_CALL",
+            response: response.body
+          });
+        })
+        console.log(`resData - ${resData}`)
+				if (resData.results.length > 0) {
+          console.log("HERE WE ARE")
+          console.log(resData.results)
+					setData(resData.results)
+				} else {
+					setMessage('Not Found')
+				}
+			}
+			fetchData()
+		}
+	}, [enteredUsers])
 
-  // const handleEnteredUser = (e, userName) => {
-	// 	e.preventDefault()
-  //   console.log(userName)
-	// 	setEnteredUsers(userName)
-	// }
+  const handleEnteredUser = (e, userName) => {
+		e.preventDefault()
+    console.log(userName)
+		setEnteredUsers(userName)
+	}
 
   // const adminUser = {
   //   username: "admin",
@@ -68,8 +68,7 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route path="/" element={<LoginForm  />} />
-            {/* handleEnteredUser={handleEnteredUser} This belongs above.*/}
+            <Route path="/" element={<LoginForm handleEnteredUser={handleEnteredUser} />} />
             <Route path="/Profile" element={<Profile />} />
           </Routes>
         </div>
@@ -79,23 +78,3 @@ function App() {
 }
 
 export default App;
-
-/*
-<Router>
-        <header>
-          <div className="topBar">
-            <ul>
-              <li>
-                <Link to="/profile"></Link>
-              </li>
-            </ul>
-          </div>
-        </header>
-
-        <div>
-          <Routes>
-            <Route path="/" element={<LoginForm />} />
-          </Routes>
-        </div>
-      </Router>
-*/

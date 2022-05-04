@@ -2,7 +2,7 @@ import React from 'react';
 import { Tabs, Row } from 'react-bootstrap';
 import { Tab, Container } from 'react-bootstrap';
 
-function WeeklyRecord() {
+function WeeklyRecord(props) {
 
     return (
         <div>

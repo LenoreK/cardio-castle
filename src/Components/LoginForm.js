@@ -26,13 +26,13 @@ function LoginForm(props) {
             <Button type='submit' variant='primary'>
                 <Link className='link' to="/Profile">Login</Link>
             </Button>
-            {/* <Button type="submit" variant="primary" onClick={function(e){
+            <Button type="submit" variant="primary" onClick={function(e){
                     props.handleEnteredUser(e, enteredUser)
                     console.log("onClick")
                     console.log(enteredUser)
                     }}>
                 Test
-            </Button> */}
+            </Button>
         </div>
     </Form>
     )
