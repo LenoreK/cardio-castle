@@ -18,6 +18,15 @@ function App() {
 		if(enteredUsers) {
       console.log(`useEffect - ${enteredUsers}`)
 			const fetchData = async () => {
+        /*const fetchString = API_URL + search
+				console.log(fetchString)				
+                const response = await fetch(fetchString,{
+					crossDomain:true,
+					method: 'GET',
+					headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*'}})
+                const resData = await response.json()
+*/ 
+        let fetchString = API_URL + enteredUsers
         console.log(`fetchData - ${enteredUsers}`)
 				document.title = `${enteredUsers} Welcome`
         console.log(`fetch - ${API_URL + enteredUsers}`)
