@@ -21,9 +21,11 @@ function App() {
         console.log(`fetchData - ${enteredUsers}`)
 				document.title = `${enteredUsers} Welcome`
         console.log(`fetch - ${API_URL + enteredUsers}`)
-				let response = await fetch(API_URL + enteredUsers,{mode:'no-cors'})
+        let response = await fetch('https://cardio-castle-foundation.herokuapp.com/users/Bevius')
+				//let response = await fetch(API_URL + enteredUsers,{mode:'no-cors'})
+        console.log(response)
         console.log(`fetch - ${response}`)
-				let resData = await response.json();
+				let resData = await response.body.json();
         console.log(`resData - ${resData}`)
 				if (resData.results.length > 0) {
           console.log("HERE WE ARE")
@@ -57,7 +59,7 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route path="/" element={<LoginForm  handleEnteredUser = {handleEnteredUser}/>} />
+            <Route path="/" element={<LoginForm  handleEnteredUser={handleEnteredUser}/>} />
             <Route path="/Profile" element={<Profile />} />
           </Routes>
         </div>
