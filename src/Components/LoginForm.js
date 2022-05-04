@@ -24,12 +24,14 @@ function LoginForm(props) {
                 <Form.Control type="password" placeholder="Enter password"/>
             </Form.Group>
             <Button type='submit' variant='primary'>
-                <Link className='link' to="/Profile"
-                onClick={function(e){
+                <Link className='link' to="/Profile">Login</Link>
+            </Button>
+            <Button type="submit" variant="primary" onClick={function(e){
                     props.handleEnteredUser(e, enteredUser)
                     console.log("onClick")
                     console.log(enteredUser)
-                    }}>Login</Link>
+                    }}>
+                Test
             </Button>
         </div>
     </Form>
