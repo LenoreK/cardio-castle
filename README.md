@@ -102,6 +102,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+Below are snippets of our login and User screens.
 ![Getting Started](./public/Capture-cardio_castle.JPG)
 ![Getting Started](./public/Capture-Login_page.JPG)
 
