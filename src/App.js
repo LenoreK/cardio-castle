@@ -13,6 +13,7 @@ function App(props) {
 	let [userData, setUserData] = useState({})
   let [goalData, setGoalData] = useState('')
   let [goalDay, setGoalDay] = useState('')
+  let [weekData, setWeekData] = useState('')
 
   const API_URL = 'https://cardio-castle-foundation.herokuapp.com/users/'
 
@@ -69,8 +70,9 @@ function App(props) {
     }
 	}
 
+  //handle weekly data
   const handleWeekData = (e, weekData) => {
-    const API_Week = 'https://cardio-castle-foundation.herokuapp.com/goals/'
+    const API_Week = 'https://cardio-castle-foundation.herokuapp.com/'
 		e.preventDefault()
     console.log(weekData)
 		setGoalData(weekData)
