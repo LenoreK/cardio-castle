@@ -69,6 +69,31 @@ function App(props) {
     }
 	}
 
+  const handleWeekData = (e, weekData) => {
+    const API_Week = 'https://cardio-castle-foundation.herokuapp.com/goals/'
+		e.preventDefault()
+    console.log(weekData)
+		setGoalData(weekData)
+    let userID = userData.id
+    if(weekData) {
+			const fetchData = async () => {
+        let fetchString = API_Week + weekData + "?userId=" + userID
+        let response = await fetch(fetchString,{
+					crossDomain:true,
+					method: 'GET',
+					headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*'}})
+				let resData = await response.json();
+				if (resData.id != null) {
+					setWeekData(resData)
+          console.log(resData)
+				} else {
+					setMessage('Not Found')
+				}
+			}
+			fetchData()
+    }
+	}
+
   // Fetching Goal_Day Data
   const handleGoalDayData = (e, goalDay) => {
     const API_Goal_Day = 'https://cardio-castle-foundation.herokuapp.com/Goal_Day/'
