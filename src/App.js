@@ -5,11 +5,13 @@ import LoginForm from "./Components/LoginForm";
 import Profile from "./Components/Profile";
 import TopBar from './Components/TopBar';
 import {useEffect, useState,Fragment } from 'react';
+import { useBootstrapPrefix } from 'react-bootstrap/esm/ThemeProvider';
 
 function App(props) {
   let [enteredUsers, setEnteredUsers] = useState('')
 	let [message, setMessage] = useState('Search for Music!')
-	let [data, setData] = useState([])
+	let [userData, setUserData] = useState({})
+  let [goalData, setGoalData] = useState('')
 
   const API_URL = 'https://cardio-castle-foundation.herokuapp.com/users/'
 
@@ -28,11 +30,13 @@ function App(props) {
         console.log(`fetch - ${response}`)
 				let resData = await response.json();
         console.log(resData)
-				if (resData.length > 0) {
+				if (resData.id != null) {
           console.log("HERE WE ARE")
           console.log(resData)
-					setData(resData)
+          console.log(typeof resData)
+					setUserData(resData)
 				} else {
+          console.log("are we here?")
 					setMessage('Not Found')
 				}
 			}
@@ -45,6 +49,33 @@ function App(props) {
     console.log(userName)
 		setEnteredUsers(userName)
 	}
+
+  const handleGoalData = (e, goalData) => {
+    const API_Goal = 'https://cardio-castle-foundation.herokuapp.com/goals/'
+		e.preventDefault()
+    console.log(goalData)
+		setGoalData(goalData)
+    let userID = userData.id
+    if(goalData) {
+			const fetchData = async () => {
+        let fetchString = API_Goal + goalData + "?userId=" + userID
+        let response = await fetch(fetchString,{
+					crossDomain:true,
+					method: 'GET',
+					headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*'}})
+				let resData = await response.json();
+				if (resData.id != null) {
+					setGoalData(resData)
+          console.log(resData)
+				} else {
+					setMessage('Not Found')
+				}
+			}
+			fetchData()
+    }
+	}
+
+  // let tbd = JSON.stringify(userData)
 
   // const adminUser = {
   //   username: "admin",
@@ -63,7 +94,7 @@ function App(props) {
             <Route path="/" element={
               <Fragment><LoginForm handleEnteredUser={handleEnteredUser} /></Fragment>
               } />
-            <Route path="/Profile" element={<Profile />} />
+            <Route path="/Profile" element={<Profile handleGoalData={handleGoalData}/>} />
           </Routes>
         </div>
       </Router>
