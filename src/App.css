@@ -53,6 +53,10 @@ body {
   border-radius: 30px;
 }
 
+.Register {
+  margin-top: 5px;
+}
+
 /* This is for formatting the logout button. The flex-grow gives the button less room. */
 .logout {
   flex-grow: 1;
