@@ -7,7 +7,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">CARDO CASTLE</h3>
+  <h3 align="center">CARDiO CASTLE</h3>
 
   <p align="center">
     The best Cardo software every built!
@@ -65,6 +65,7 @@ Overall, we here at www.cardiocastle.com want to encurage all road warriors to a
 
 * [React.js](https://reactjs.org/)
 * [Bootstrap](https://getbootstrap.com)
+* [Postrgres0](https://www.postgresql.org/)  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -142,7 +143,7 @@ _For more examples, please refer to the [Backend](https://cardio-castle-foundati
 
 Araz Shahinian - [@arshahinian](arshahinian@gmail.com)
 Lenore Kelly - [@lenoreK](lenoreK@gmail.com)
-Edwin William =  [ewilliam908](edwinwilliam908@gmail.com)
+Edwin William =  [@ewilliam908](edwinwilliam908@gmail.com)
 
 Project Link: [https://github.com/LenoreK/cardio-castle](https://github.com/LenoreK/cardio-castle-api)
 
@@ -151,8 +152,8 @@ Project Link: [https://github.com/LenoreK/cardio-castle](https://github.com/Leno
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [code assistance](https://reactjs.org/docs/hooks-effect.html)
-* [code assistance](https://stackoverflow.com/)
-* [Inspiration](www.youtube.com)  
+* [React.js](https://reactjs.org/docs/hooks-effect.html)
+* [Stack Overflow](https://stackoverflow.com/)
+* [Video](www.youtube.com)  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
