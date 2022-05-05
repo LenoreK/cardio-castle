@@ -12,31 +12,24 @@ function App(props) {
 	let [message, setMessage] = useState('Search for Music!')
 	let [userData, setUserData] = useState({})
   let [goalData, setGoalData] = useState('')
+  let [goalDay, setGoalDay] = useState('')
 
   const API_URL = 'https://cardio-castle-foundation.herokuapp.com/users/'
 
+  // Fetching Entered User
   useEffect(() => {
-    console.log("useEffect - API")
 		if(enteredUsers) {
       console.log(`useEffect - ${enteredUsers}`)
 			const fetchData = async () => {
-        let fetchString = API_URL + enteredUsers
-        console.log(fetchString)				
+        let fetchString = API_URL + enteredUsers		
         let response = await fetch(fetchString,{
 					crossDomain:true,
 					method: 'GET',
 					headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*'}})
-        console.log(response)
-        console.log(`fetch - ${response}`)
 				let resData = await response.json();
-        console.log(resData)
 				if (resData.id != null) {
-          console.log("HERE WE ARE")
-          console.log(resData)
-          console.log(typeof resData)
 					setUserData(resData)
 				} else {
-          console.log("are we here?")
 					setMessage('Not Found')
 				}
 			}
@@ -50,6 +43,7 @@ function App(props) {
 		setEnteredUsers(userName)
 	}
 
+  // Fetching Goal Data
   const handleGoalData = (e, goalData) => {
     const API_Goal = 'https://cardio-castle-foundation.herokuapp.com/goals/'
 		e.preventDefault()
@@ -75,15 +69,31 @@ function App(props) {
     }
 	}
 
-  // let tbd = JSON.stringify(userData)
-
-  // const adminUser = {
-  //   username: "admin",
-  //   password: "admin123"
-  // }
-
-  // const [user, setUser] = useState({username: "", paswword: ""});
-  // const [error, setError] = useState("");
+  // Fetching Goal_Day Data
+  const handleGoalDayData = (e, goalDay) => {
+    const API_Goal_Day = 'https://cardio-castle-foundation.herokuapp.com/Goal_Day/'
+		e.preventDefault()
+    console.log(goalDay)
+		setGoalData(goalDay)
+    let userID = userData.id
+    if(goalDay) {
+			const fetchData = async () => {
+        let fetchString = API_Goal_Day + goalDay + "?userId=" + userID
+        let response = await fetch(fetchString,{
+					crossDomain:true,
+					method: 'GET',
+					headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*'}})
+				let resData = await response.json();
+				if (resData.id != null) {
+					setGoalDay(resData)
+          console.log(resData)
+				} else {
+					setMessage('Not Found')
+				}
+			}
+			fetchData()
+    }
+	}
 
   return (
 
@@ -94,7 +104,7 @@ function App(props) {
             <Route path="/" element={
               <Fragment><LoginForm handleEnteredUser={handleEnteredUser} /></Fragment>
               } />
-            <Route path="/Profile" element={<Profile handleGoalData={handleGoalData}/>} />
+            <Route path="/Profile" element={<Profile handleGoalData={handleGoalData} handleGoalDayData={handleGoalDayData} />} />
           </Routes>
         </div>
       </Router>

@@ -4,7 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 function DailyComponent() {
     return (
         <div className="three-row">
-            <div className="dayHeader">
+            <div className="dayHeader" id='dayHeader'>
                 {/* Need to add in code for changing the number */}
                 <h2 className="dayHeader">Day 2</h2>
             </div>

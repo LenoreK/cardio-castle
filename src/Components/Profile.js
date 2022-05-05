@@ -8,7 +8,7 @@ function Profile(props) {
     return (
         <div className='main-container'>
             <TopBar />
-            <Aside handleGoalData={props.handleGoalData} />
+            <Aside handleGoalData={props.handleGoalData} handleGoalDayData={props.handleGoalDayData} />
             <main>
                 <WeeklyRecord />
                 <DailyComponent />
