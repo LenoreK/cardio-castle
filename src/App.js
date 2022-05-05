@@ -6,6 +6,7 @@ import Profile from "./Components/Profile";
 import TopBar from './Components/TopBar';
 import {useEffect, useState,Fragment } from 'react';
 import { useBootstrapPrefix } from 'react-bootstrap/esm/ThemeProvider';
+import Register from './Components/Register';
 
 function App(props) {
   let [enteredUsers, setEnteredUsers] = useState('')
@@ -188,6 +189,7 @@ function App(props) {
               <Fragment><LoginForm handleEnteredUser={handleEnteredUser} handleNewUser={handleNewUser} /></Fragment>
               } />
             <Route path="/Profile" element={<Profile handleGoalData={handleGoalData}/>} />
+            <Route path="/Register" element={<Register />} />
           </Routes>
         </div>
       </Router>
