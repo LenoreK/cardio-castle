@@ -31,15 +31,15 @@ function LoginForm(props) {
                     console.log("onClick")
                     console.log(enteredUser)
                     }}>
-                Test
+                Get
             </Button>
             <Button type="submit" variant="primary" onClick={function(e){
                     props.handleNewUser(e, enteredUser)
                     console.log("onClick")
                     console.log(enteredUser)
                     }}>
-                New User
-            </Button>
+                New
+            </Button>           
         </div>
     </Form>
     )
