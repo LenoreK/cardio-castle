@@ -47,8 +47,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 We are building a user experience to modivate the passionate runner to set goals and accomplish those goals!
 
 Application Features:
@@ -77,9 +75,11 @@ Overall, we here at www.cardiocastle.com want to encurage all road warriors to a
 
 ### Prerequisites
 
+* The will to self improve and change your life
 * Equipment
     - Windows 10 or better
     - macOS Monterey 12.3.1
+
 
 ### Installation
 
