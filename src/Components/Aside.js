@@ -21,11 +21,13 @@ function Profile(props) {
                                 }
                             }/>
                         </Form.Group>
-                            <Button className="startGoal" type='submit' variant='primary' onClick={function(e){
-                    props.handleGoalData(e, enteredGoal)
-                    console.log("onClick")
-                    console.log(enteredGoal)
-                    }}>Start Goal</Button>
+                        <Button className="startGoal" type='submit' variant='primary' onClick={function(e){
+                            props.handleGoalData(e, enteredGoal)
+                            console.log("onClick")
+                            console.log(enteredGoal)
+                            }}>
+                                Start Goal
+                        </Button>
                             <br />
                             <Button className="finishGoal" type="submit">Finish Goal</Button>
                             </div>

@@ -32,6 +32,15 @@ function LoginForm(props) {
             </Button>
             <br />
             <Link className="Register" to="/Register">Register</Link>
+                Get
+            </Button>
+            <Button type="submit" variant="primary" onClick={function(e){
+                    props.handleNewUser(e, enteredUser)
+                    console.log("onClick")
+                    console.log(enteredUser)
+                    }}>
+                New
+            </Button>           
         </div>
     </Form>
     )
