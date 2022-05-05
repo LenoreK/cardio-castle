@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginForm from "./Components/LoginForm";
 import Profile from "./Components/Profile";
 import TopBar from './Components/TopBar';
-import {useEffect, useState } from 'react';
+import {useEffect, useState,Fragment } from 'react';
 
-function App() {
+function App(props) {
   let [enteredUsers, setEnteredUsers] = useState('')
 	let [message, setMessage] = useState('Search for Music!')
 	let [data, setData] = useState([])
@@ -18,26 +18,20 @@ function App() {
 		if(enteredUsers) {
       console.log(`useEffect - ${enteredUsers}`)
 			const fetchData = async () => {
-        /*const fetchString = API_URL + search
-				console.log(fetchString)				
-                const response = await fetch(fetchString,{
+        let fetchString = API_URL + enteredUsers
+        console.log(fetchString)				
+        let response = await fetch(fetchString,{
 					crossDomain:true,
 					method: 'GET',
 					headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*'}})
-                const resData = await response.json()
-*/ 
-        let fetchString = API_URL + enteredUsers
-        console.log(`fetchData - ${enteredUsers}`)
-				document.title = `${enteredUsers} Welcome`
-        console.log(`fetch - ${API_URL + enteredUsers}`)
-				let response = await fetch(API_URL + enteredUsers,{mode:'no-cors'})
+        console.log(response)
         console.log(`fetch - ${response}`)
 				let resData = await response.json();
-        console.log(`resData - ${resData}`)
-				if (resData.results.length > 0) {
+        console.log(resData)
+				if (resData.length > 0) {
           console.log("HERE WE ARE")
-          console.log(resData.results)
-					setData(resData.results)
+          console.log(resData)
+					setData(resData)
 				} else {
 					setMessage('Not Found')
 				}
@@ -66,7 +60,9 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route path="/" element={<LoginForm  handleEnteredUser = {handleEnteredUser}/>} />
+            <Route path="/" element={
+              <Fragment><LoginForm handleEnteredUser={handleEnteredUser} /></Fragment>
+              } />
             <Route path="/Profile" element={<Profile />} />
           </Routes>
         </div>
@@ -77,23 +73,3 @@ function App() {
 }
 
 export default App;
-
-/*
-<Router>
-        <header>
-          <div className="topBar">
-            <ul>
-              <li>
-                <Link to="/profile"></Link>
-              </li>
-            </ul>
-          </div>
-        </header>
-
-        <div>
-          <Routes>
-            <Route path="/" element={<LoginForm />} />
-          </Routes>
-        </div>
-      </Router>
-*/

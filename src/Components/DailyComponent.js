@@ -24,10 +24,10 @@ function DailyComponent() {
                         <Form.Control type='number' placeholder="Enter in miles..." />
                     </Form.Group>
                 </Form>
-                <div className="notes">
-                    <h3>Notes</h3>
-                    <Form.Group className="textArea" controlId="formBasicUser">
-                        <Form.Control as='textarea' rows={2} placeholder="Write a Goal..." />
+                <div className="notesContainer">
+                    <h3 className="notes">Notes:</h3>
+                    <Form.Group className="textArea1" controlId="formBasicUser">
+                        <Form.Control as='textarea' rows={6} placeholder="Write a Goal..." />
                     </Form.Group>
                 </div>
             </div>
