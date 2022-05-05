@@ -46,6 +46,31 @@ function App(props) {
 		setEnteredUsers(userName)
 	}
 
+  const handleNewUser = (e, newUserName) => {
+		e.preventDefault()
+    console.log(newUserName)
+		if(newUserName) {      
+      console.log(`handleNewUser - ${newUserName}`)
+      
+      var defaultPassword = newUserName.charAt(1) + newUserName.length + newUserName.charAt(newUserName.length - 1) + '*'
+      console.log(`handleNewUserPw - ${defaultPassword}`)
+
+			let fetchData = async () => {
+        let fetchString = API_URL
+        console.log(fetchString)				
+        let response = await fetch(fetchString,{
+					crossDomain:true,
+					method: 'POST',
+					headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*','Access-Control-Allow-Methods': 'POST'},          
+          body: JSON.stringify({'user_name':newUserName,'password':defaultPassword,'last_modified':'05/05/2022','last_modified_by':'WebSite'})
+        })
+        console.log(response)
+        setMessage(response)				
+			}
+			fetchData()
+		}
+	}
+
   // const adminUser = {
   //   username: "admin",
   //   password: "admin123"
@@ -61,7 +86,7 @@ function App(props) {
         <div>
           <Routes>
             <Route path="/" element={
-              <Fragment><LoginForm handleEnteredUser={handleEnteredUser} /></Fragment>
+              <Fragment><LoginForm handleEnteredUser={handleEnteredUser} handleNewUser={handleNewUser} /></Fragment>
               } />
             <Route path="/Profile" element={<Profile />} />
           </Routes>

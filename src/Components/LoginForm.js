@@ -33,6 +33,13 @@ function LoginForm(props) {
                     }}>
                 Test
             </Button>
+            <Button type="submit" variant="primary" onClick={function(e){
+                    props.handleNewUser(e, enteredUser)
+                    console.log("onClick")
+                    console.log(enteredUser)
+                    }}>
+                New User
+            </Button>
         </div>
     </Form>
     )
