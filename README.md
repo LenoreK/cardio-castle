@@ -52,10 +52,10 @@ We are building a user experience to modivate the passionate runner to set goals
 Application Features:
 * User Login: The user will have a "secure" login page to make sure their goals and cardio castle information is secret.
 * Four Week Goal Name: The user will name the goal and claim victory when they complete their goals as they work through the application.
-* Weeks and Days: When a goal is named the application lays out the weeks and days for the user to enter there duration and distance for each day.
-* Mood Index: The user can set the mood at the end of the workout by choosing different icons to record how they feel they did that day!
+* Weeks and Days: When a goal is named the application lays out the weeks and days for the user. It then enters the duration and distance for each day.
+* Mood Index: The user can set the mood at the end of the workout by choosing different icons to record how it went!
 
-Overall, we here at www.cardiocastle.com want to encurage all road warriors to achieve their fitness goals and live healthy lives.
+Overall, we here at www.cardiocastle.com want to encourage all road warriors to achieve their fitness goals.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
