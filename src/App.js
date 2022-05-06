@@ -103,6 +103,7 @@ function App(props) {
              if(resData[i].user_account_id == userID && resData[i].goal_status == 1)
              {
                 userHasGoal = true;
+                setGoalData(resData[i]);
              }
           }
         }
@@ -170,6 +171,32 @@ function App(props) {
       fetchAllGoalData();      
     }   
   }
+
+
+  const handleGoalFinish = (e, goalName) => {
+    console.log("***handleGoalFinish***")
+		e.preventDefault()
+    let userID = userData.id
+    console.log(goalName)
+		if(goalName) {      
+      console.log(`handleGoalFinish - ${goalName}`)
+    
+      let fetchGoalFinishData = async () => {
+        let fetchString = API_URL
+        console.log(fetchString)				
+        let response = await fetch(fetchString,{
+					crossDomain:true,
+					method: 'PUT',
+					headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*','Access-Control-Allow-Methods': 'PUT'},          
+          body: JSON.stringify({"id":goalData.id,"goal_name":goalName,"goal_status":0,"last_modified":"05/01/2022","last_modified_by":"Website","user_account_id":userID})
+        })
+        console.log(response)
+        setMessage(response)        
+			}
+			fetchGoalFinishData()
+		}
+	}
+
   // let tbd = JSON.stringify(userData)
 
   // const adminUser = {
@@ -189,7 +216,7 @@ function App(props) {
             <Route path="/" element={
               <Fragment><LoginForm handleEnteredUser={handleEnteredUser} handleNewUser={handleNewUser} /></Fragment>
               } />
-            <Route path="/Profile" element={<Profile handleGoalData={handleGoalData}/>} />
+            <Route path="/Profile" element={<Profile handleGoalData={handleGoalData} handleGoalFinish={handleGoalFinish}/>} />
             <Route path="/Register" element={<Register handleNewUser= {handleNewUser}/>} />
           </Routes>
         </div>
