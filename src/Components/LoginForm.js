@@ -31,16 +31,7 @@ function LoginForm(props) {
                 <Link className='link' to="/Profile">Login</Link>
             </Button>
             <br />
-            <Link className="Register" to="/Register">Register</Link>
-                Get
-            </Button>
-            <Button type="submit" variant="primary" onClick={function(e){
-                    props.handleNewUser(e, enteredUser)
-                    console.log("onClick")
-                    console.log(enteredUser)
-                    }}>
-                New
-            </Button>           
+            <Link className="Register" to="/Register">Register</Link>                   
         </div>
     </Form>
     )

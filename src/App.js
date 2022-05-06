@@ -71,7 +71,8 @@ function App(props) {
           body: JSON.stringify({'user_name':newUserName,'password':defaultPassword,'last_modified':'05/05/2022','last_modified_by':'WebSite'})
         })
         console.log(response)
-        setMessage(response)				
+        setMessage(response)
+        setEnteredUsers(newUserName)		
 			}
 			fetchData()
 		}
@@ -189,7 +190,7 @@ function App(props) {
               <Fragment><LoginForm handleEnteredUser={handleEnteredUser} handleNewUser={handleNewUser} /></Fragment>
               } />
             <Route path="/Profile" element={<Profile handleGoalData={handleGoalData}/>} />
-            <Route path="/Register" element={<Register />} />
+            <Route path="/Register" element={<Register handleNewUser= {handleNewUser}/>} />
           </Routes>
         </div>
       </Router>
